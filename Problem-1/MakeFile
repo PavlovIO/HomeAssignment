@@ -1,0 +1,12 @@
+
+output: main.o sayhello.o 
+	g++ main.o sayhello.o -o output
+	
+main.o: main.cpp hello.h
+	g++ -c main.cpp
+
+sayhello.o: sayhello.cpp hello.h
+	g++ -c sayhello.cpp
+
+clean:
+	rm *.o output
