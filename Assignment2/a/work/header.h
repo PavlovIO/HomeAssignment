@@ -10,6 +10,7 @@
 
 
 std::string get_file();
-
+char* read_file(const std::string& file,int &size);
+void write_file(char* inlist, int size);
 
 #endif
