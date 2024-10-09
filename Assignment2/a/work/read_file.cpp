@@ -1,3 +1,6 @@
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment2a
+*/
 #include "header.h"
 
 char* read_file(const std::string& file,int &size){
