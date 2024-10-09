@@ -10,9 +10,6 @@ int main(){
 	std::string* ps_f;
 	ps_f = str_form(ps, len);
 	
-	std::cout << ps_f<<std::endl;
-	std::cout << len<<std::endl;
-	
 	double* stack = new double[len];
 	int k = 0;
 
