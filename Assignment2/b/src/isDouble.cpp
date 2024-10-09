@@ -1,3 +1,6 @@
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment2b
+*/
 #include "header.h"
 
 bool isDouble(const std::string& str) {

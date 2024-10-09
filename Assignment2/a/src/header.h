@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment2a
+*/
 
 #ifndef HELLO_H
 #define HELLO_H

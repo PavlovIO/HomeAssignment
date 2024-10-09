@@ -1,7 +1,7 @@
 
 
-#ifndef HELLO_H
-#define HELLO_H
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <iostream>
 #include <string>

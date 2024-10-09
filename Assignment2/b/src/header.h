@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment2b
+*/
 
 #ifndef HEADER_H
 #define HEADER_H
