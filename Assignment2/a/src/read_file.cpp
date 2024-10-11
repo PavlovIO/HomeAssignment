@@ -14,13 +14,13 @@ char* read_file(const std::string& file,int &size){
     infile.read(inlist, size);
     infile.close();
     
-
+    std::cout << inlist << std::endl;
     
     for (int i = 0; i<size/2; i++){
         std::swap(inlist[i],inlist[size-i-1]);
     }
     
-
+    std::cout << inlist << std::endl;
     
     return inlist;
 

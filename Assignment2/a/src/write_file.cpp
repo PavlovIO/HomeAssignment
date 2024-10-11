@@ -4,10 +4,11 @@
 #include "header.h"
 
 void write_file(char* inlist, int size){
-    std::ofstream outfile("outfile.txt", std::ios::binary); 
+    std::ofstream outfile("outfile", std::ios::binary); 
     
     
-    outfile.write((char *)&inlist, size);
+    outfile.write((char *)inlist, size);
+    outfile.close();
     delete[] inlist;
     inlist = nullptr;
     }

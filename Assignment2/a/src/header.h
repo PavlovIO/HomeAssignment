@@ -1,9 +1,7 @@
-/* Ilya Pavlov st129535@student.spbu.ru
-	assignment2a
-*/
 
-#ifndef HELLO_H
-#define HELLO_H
+
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <iostream>
 #include <string>

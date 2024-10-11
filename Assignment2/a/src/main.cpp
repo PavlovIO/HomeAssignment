@@ -12,6 +12,8 @@ int main(){
     
     list = read_file(name,size);
     
+    std::cout << list << std::endl;
+    
     write_file(list, size);
 
 }
