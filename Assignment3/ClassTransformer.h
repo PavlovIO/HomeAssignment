@@ -2,17 +2,22 @@
 #ifndef CLASSTRANSFORMER_H
 #define CLASSTRANSFORMER_H
 
+#include "ClassDirection.h"
+#include "ClassGun.h"
+#include "ClassUltimate.h"
+#include <iostream>
+
 class Transformer{
 public:
 	//конструктор
-	Transformer(Gun *gun);
+	Transformer(Gun *gun, int x_pos, int y_pos);
 	
 	//методы
 	bool move(Direction dir, int x_pos, int y_pos);
 	bool turn(Direction dir);//работает как сеттер для направления
 	bool jump(Direction dir, int x_pos, int y_pos);
 	bool fire(Direction dir, int x_pos, int y_pos, uint ammo);
-	bool ultimate();
+	bool ultimate(Ultimate ultimate);
 	
 	//геттеры
 	uint get_level();
@@ -24,6 +29,7 @@ public:
 	Gun get_gun();
 	int get_x_pos();
 	int get_y_pos();
+	Ultimate get_ultimate();
 	
 	// сеттеры
 	void set_level(uint level);
@@ -34,6 +40,7 @@ public:
 	void set_gun(Gun *gun);
 	void set_x_pos(int x_pos);
 	void set_y_pos(int y_pos);
+	void set_ultimate(Ultimate ultimate);
 	
 private:
 
@@ -46,7 +53,8 @@ private:
 	Direction _dir = Direction::North;
 	int _x_pos = 0;
 	int _y_pos = 0;
-	Gun _gun = Gun::No_gun;
+	Gun _gun = Fists;
+	Ultimate _ultimate = Heal;
 	
 };
 
