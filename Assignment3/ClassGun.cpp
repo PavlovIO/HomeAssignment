@@ -2,14 +2,14 @@
 #include"ClassGun.h"
 
 //конструктор
-Gun::Gun(Type type = Type::Fists)
-	: _type(type) {}
+Gun::Gun(Type type)
+	: _type(type), _stats(get_stats_for_type(type)) {}
 	
-void Gun::get_stats(Type type) const {
+void Gun::get_stats() const {
 	 std::cout << "Type: " << static_cast<int>(_type) 
                   << ", Damage: " << _stats.damage 
                   << ", Range: " << _stats.range 
-                  << ", Fire Rate: " << _stats.fireRate 
+                  << ", Fire Rate: " << _stats.fire_rate 
                   << std::endl;
 };
 

@@ -4,6 +4,7 @@
 
 #include <iostream>
 
+
 class Gun{
 public:
 	//различные виды оружия
@@ -11,9 +12,9 @@ public:
 	
 	//структура с для параметров оружия
 	struct Stats {
-		uint _damage;
-		uint _range;
-		uint _fire_rate;//в секунду
+		uint damage;
+		uint range;
+		uint fire_rate;//в секунду
 	};
 	
 	//конструктор

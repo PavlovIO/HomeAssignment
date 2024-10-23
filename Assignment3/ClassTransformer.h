@@ -7,6 +7,7 @@
 #include "ClassUltimate.h"
 #include <iostream>
 
+
 class Transformer{
 public:
 	//конструктор
@@ -53,8 +54,8 @@ private:
 	Direction _dir = Direction::North;
 	int _x_pos = 0;
 	int _y_pos = 0;
-	Gun _gun = Fists;
-	Ultimate _ultimate = Heal;
+	Gun _gun;
+	Ultimate _ultimate;
 	
 };
 
