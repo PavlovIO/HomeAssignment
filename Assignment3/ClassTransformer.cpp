@@ -5,6 +5,25 @@
 //Конструктор
 Transformer::Transformer(Gun *gun, int x_pos, int y_pos)
 	: _gun(*gun), _x_pos(x_pos), _y_pos(y_pos) {}
+
+//деструктор
+~Transformer::Transformer() {
+	delete _gun;
+	delete _ultimate;
+}
+//конструктор копии
+Transformer::Transformer(const Transformer& other)
+	: _level(other._level),
+	  _strength(other._strength),
+	  _health(other._health),
+	  _fuel(other._fuel),
+	  _ammo(other._ammo),
+	  _dir(other._dir),
+	  _x_pos(other._x_pos),
+	  _y_pos(other._y_pos),
+	  //копирование значений из ссылок
+	  _gun(other._gun ? new Gun(*other._gun) : nullptr),
+	  _ultimate(other._ultimate ? new Ultimate(*other._ultimate) : nullptr)
 	
 //Реализация методов
 
@@ -111,7 +130,8 @@ void Transformer::set_ammo(uint ammo) {
 };
 
 void Transformer::set_gun(Gun *gun) {
-	_gun = *gun;
+	delete _gun
+	_gun = gun;
 };
 
 void Transformer::set_x_pos(int x_pos) {
@@ -122,7 +142,8 @@ void Transformer::set_y_pos(int y_pos) {
 	_y_pos = y_pos;
 };
 
-void Transformer::set_ultimate(Ultimate ultimate) {
+void Transformer::set_ultimate(Ultimate *ultimate) {
+	delete _ultimate;
 	_ultimate = ultimate;
 };
 
