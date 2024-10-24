@@ -11,7 +11,7 @@
 class Transformer{
 public:
 	//конструктор
-	Transformer(Gun *gun,Ultimate *ultimate, int x_pos, int y_pos);
+	Transformer(Gun* gun,Ultimate* ultimate, int x_pos, int y_pos);
 	
 	//деструктор
 	~Transformer();
@@ -20,11 +20,11 @@ public:
 	Transformer(const Transformer& other);
 	
 	//методы
-	bool move(Direction dir, int x_pos, int y_pos);
+	bool move();
 	bool turn(Direction dir);//работает как сеттер для направления
-	bool jump(Direction dir, int x_pos, int y_pos);
-	bool fire(Direction dir, int x_pos, int y_pos, uint ammo);
-	bool ultimate(Ultimate *ultimate);
+	bool jump();
+	bool fire();
+	bool ultimate();
 	
 	//геттеры
 	uint get_level();
@@ -33,7 +33,7 @@ public:
 	uint get_fuel();
 	uint get_ammo();
 	Direction get_dir();
-	Gun get_gun();
+	void get_gun();
 	int get_x_pos();
 	int get_y_pos();
 	Ultimate get_ultimate();
@@ -60,8 +60,8 @@ private:
 	Direction _dir = Direction::North;
 	int _x_pos = 0;
 	int _y_pos = 0;
-	Gun *_gun;
-	Ultimate *_ultimate;
+	Gun* _gun;
+	Ultimate* _ultimate;
 	
 };
 

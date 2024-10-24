@@ -3,11 +3,10 @@
 #define CLASSTRANSFORMER_H
 
 enum class Direction{
-private:
-	North;
-	East;
-	South;
-	West;
+	North,
+	East,
+	South,
+	West,
 };
 
 #endif

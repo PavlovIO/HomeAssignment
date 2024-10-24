@@ -6,26 +6,26 @@ Gun::Gun(Type type)
 	: _type(type), _stats(get_stats_for_type(type)) {}
 	
 void Gun::get_stats() const {
-	 std::cout << "Type: " << static_cast<int>(_type) 
+	 std::cout << "Type: " << _stats.name 
                   << ", Damage: " << _stats.damage 
                   << ", Range: " << _stats.range 
                   << ", Fire Rate: " << _stats.fire_rate 
                   << std::endl;
 };
 
-Stats Gun::get_stats_for_type(Type type) {
+Gun::Stats Gun::get_stats_for_type(Type type) {
 	 switch (type) {
             case Type::Fists: 
-                return { 15, 1, 1 }; // Урон, дальность, скорострельность
+                return { "Fists",15, 1, 1 }; // Урон, дальность, скорострельность
             case Type::Pistol: 
-                return { 10, 50, 1 };
+                return { "Pistol",10, 50, 1 };
             case Type::Rifle: 
-                return { 30, 100, 2 };
+                return { "Rifle",30, 100, 2 };
             case Type::Shotgun: 
-                return { 50, 30, 1 };
+                return { "Shotgun",50, 30, 1 };
             case Type::No_gun: 
             default:
-                return { 0, 0, 0 };
+                return { "No_gun",0, 0, 0 };
         }
 
 };
