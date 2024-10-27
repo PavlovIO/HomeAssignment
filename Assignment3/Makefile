@@ -1,7 +1,7 @@
 
 #переменные
 CXX = g++
-CXXFLAGS = -Wall -g -std=c++11
+CXXFLAGS = -Wall -Werror -Wpedantic -g -std=c++11
 LDFLAGS = -lgtest -lgtest_main -pthread
 
 # Список всех исходников
