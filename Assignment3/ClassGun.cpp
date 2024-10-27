@@ -1,16 +1,19 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment3
+*/
 #include"ClassGun.h"
 
 //конструктор
 Gun::Gun(Type type)
 	: _type(type), _stats(get_stats_for_type(type)) {}
 	
-void Gun::get_stats() const {
+Gun::Stats Gun::get_stats() const {
 	 std::cout << "Type: " << _stats.name 
                   << ", Damage: " << _stats.damage 
                   << ", Range: " << _stats.range 
                   << ", Fire Rate: " << _stats.fire_rate 
                   << std::endl;
+         return _stats;
 };
 
 Gun::Stats Gun::get_stats_for_type(Type type) {
@@ -23,6 +26,8 @@ Gun::Stats Gun::get_stats_for_type(Type type) {
                 return { "Rifle",30, 100, 2 };
             case Type::Shotgun: 
                 return { "Shotgun",50, 30, 1 };
+            case Type::Claw:
+            	return {"Claw",50,1, 2};
             case Type::No_gun: 
             default:
                 return { "No_gun",0, 0, 0 };

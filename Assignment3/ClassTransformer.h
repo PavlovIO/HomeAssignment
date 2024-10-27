@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment3
+*/
 #ifndef CLASSTRANSFORMER_H
 #define CLASSTRANSFORMER_H
 
@@ -8,10 +10,11 @@
 #include <iostream>
 
 
+
 class Transformer{
 public:
 	//конструктор
-	Transformer(Gun* gun,Ultimate* ultimate, int x_pos, int y_pos);
+	Transformer(Gun* _gun = new Gun(Gun::Type::Pistol),Ultimate* ultimate  = new Ultimate(Ultimate::Type::Shield), int x_pos = 0, int y_pos  = 0);
 	
 	//деструктор
 	~Transformer();
@@ -21,7 +24,7 @@ public:
 	
 	//методы
 	bool move();
-	bool turn(Direction dir);//работает как сеттер для направления
+	bool turn(std::string dir);
 	bool jump();
 	bool fire();
 	bool ultimate();
@@ -32,11 +35,12 @@ public:
 	uint get_health();
 	uint get_fuel();
 	uint get_ammo();
-	Direction get_dir();
+	std::string get_dir();
 	void get_gun();
 	int get_x_pos();
 	int get_y_pos();
-	Ultimate get_ultimate();
+	void get_ultimate();
+	
 	
 	// сеттеры
 	void set_level(uint level);
@@ -52,17 +56,16 @@ public:
 private:
 
 	//поля
+	Gun* _gun;
+	Ultimate* _ultimate;
+	int _x_pos ;
+	int _y_pos;	
 	uint _level = 1;
 	uint _strength = 5;
 	uint _health = 20;
 	uint _fuel = 100;
 	uint _ammo = 0;
-	Direction _dir = Direction::North;
-	int _x_pos = 0;
-	int _y_pos = 0;
-	Gun* _gun;
-	Ultimate* _ultimate;
-	
+	Direction _dir = Direction::Type::North;
 };
 
 #endif

@@ -1,20 +1,53 @@
 
-output: main.o ClassTransformer.o ClassGun.o ClassUltimate.o ClassTransformer.h ClassGun.h ClassUltimate.h ClassDirection.h
-	g++  main.o ClassTransformer.o ClassGun.o ClassUltimate.o -o output
-main.o: main.cpp ClassTransformer.h
-	g++ -c main.cpp
+#переменные
+CXX = g++
+CXXFLAGS = -Wall -g -std=c++11
+LDFLAGS = -lgtest -lgtest_main -pthread
 
-ClassTransformer.o: ClassTransformer.cpp ClassTransformer.h 
-	g++ -c 	ClassTransformer.cpp
+# Список всех исходников
+SRC = ClassTransformer.cpp ClassGun.cpp ClassDirection.cpp ClassUltimate.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassDinobot.cpp Tests.cpp
+#Список всех объектных файлов
+OBJ = $(SRC:.cpp=.o)
 
-ClassGun.o: ClassGun.cpp ClassGun.h
-	g++ -c ClassGun.cpp
-	
-ClassUltimate.o: ClassUltimate.cpp ClassUltimate.h
-	g++ -c ClassUltimate.cpp
+#Исполняемый файл
+TARGET = output
 
+#Правило по умолчанию
+all: $(TARGET)
+
+#Правило сборки
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(TARGET) $(LDFLAGS)
+
+#Правило для компиляции
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+#Правило очистки
 clean:
-	rm -f *.o
-
+	rm -f $(OBJ)
 cleanall:
-	rm -f *.o output
+	rm -f $(OBJ) $(TARGET)
+
+#Правило для запуска тестов
+run: $(TARGET)
+	./$(TARGET)
+
+# Указываем зависимости для объектных файлов
+ClassTransformer.o: ClassTransformer.cpp ClassTransformer.h ClassGun.h ClassUltimate.h ClassDirection.h
+ClassGun.o: ClassGun.cpp ClassGun.h
+ClassDirection.o: ClassDirection.cpp ClassDirection.h
+ClassUltimate.o: ClassUltimate.cpp ClassUltimate.h
+ClassAutobot.o: ClassAutobot.cpp ClassAutobot.h
+ClassDecepticon.o: ClassDecepticon.cpp ClassDecepticon.h
+ClassDinobot.o: ClassDinobot.cpp ClassDinobot.h
+
+.PHONY: all clean run
+
+
+
+
+
+
+
+

@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment3
+*/
 #ifndef CLASSGUN_H
 #define CLASSGUN_H
 
@@ -8,7 +10,7 @@
 class Gun{
 public:
 	//различные виды оружия
-	enum class Type { No_gun, Fists, Pistol, Rifle, Shotgun };
+	enum class Type { No_gun, Fists, Pistol, Rifle, Shotgun, Claw };
 	
 	//структура с для параметров оружия
 	struct Stats {
@@ -22,7 +24,7 @@ public:
 	Gun(Type type = Type::Fists);
 	
 	//методы
-	void get_stats() const;
+	Stats get_stats() const;
 	
 private:
 		

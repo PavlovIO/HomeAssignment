@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment3
+*/
 
 #include "ClassTransformer.h"
 
@@ -13,17 +15,19 @@ Transformer::~Transformer() {
 }
 //конструктор копии
 Transformer::Transformer(const Transformer& other)
-	: _level(other._level),
+	: 
+	  //копирование значений из ссылок
+	  _gun(other._gun ? new Gun(*other._gun) : nullptr),
+	  _ultimate(other._ultimate ? new Ultimate(*other._ultimate) : nullptr),
+	  _x_pos(other._x_pos),
+	  _y_pos(other._y_pos),
+	  _level(other._level),
 	  _strength(other._strength),
 	  _health(other._health),
 	  _fuel(other._fuel),
 	  _ammo(other._ammo),
-	  _dir(other._dir),
-	  _x_pos(other._x_pos),
-	  _y_pos(other._y_pos),
-	  //копирование значений из ссылок
-	  _gun(other._gun ? new Gun(*other._gun) : nullptr),
-	  _ultimate(other._ultimate ? new Ultimate(*other._ultimate) : nullptr) {}
+	  _dir(other._dir)
+{}
 
 //Реализация методов
 
@@ -37,11 +41,19 @@ bool Transformer::move() {
 };
 
 //поворот 
-bool Transformer::turn(Direction dir) {
-	std::cout<<"Turning"<<std::endl;
-	_dir = dir;
-	return true;
-};
+bool Transformer::turn(std::string dir) {
+	if (dir == "right") {
+		_dir.turn_right();
+	} else if (dir == "left") {
+		_dir.turn_left();
+	} else if (dir == "around") {
+		_dir.turn_around();
+	} else {
+		std::cout << "Unknown direction" << std::endl;
+		return false; 
+	}
+	return true; 
+}
 
 //перемещение на несколько клеток в том направлении куда смотрит
 bool Transformer::jump() {
@@ -63,6 +75,7 @@ bool Transformer::fire() {
 bool Transformer::ultimate() { 
 	std::cout<<"Brace for impact. Activating ULTIMATE!!!"<<std::endl;
 	//будет добавлена реализация использования ультимативной способности
+	_ultimate->use();
 	return true;
 };
 
@@ -88,8 +101,9 @@ uint Transformer::get_ammo() {
 	return _ammo;
 };
 
-Direction Transformer::get_dir() {
-	return _dir;
+std::string Transformer::get_dir() {
+	return _dir.get_direction();
+	
 };
 
 void Transformer::get_gun() {
@@ -103,10 +117,9 @@ int Transformer::get_x_pos() {
 int Transformer::get_y_pos() {
 	return _y_pos;
 };
-/* пока нет реализации для гет ултимейт
-Ultimate Transformer::get_ultimate() {
-	return *_ultimate;
-};*/
+void Transformer::get_ultimate() {
+	_ultimate -> ultimate_type();
+};
 //Реализация методов сеттеров
 
 void Transformer::set_level(uint level) {

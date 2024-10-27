@@ -8,4 +8,4 @@ Home assingment 2a - creating Class Transformer with some additional classes
 ## Build
 make
 ## Run
-./output
+make run
