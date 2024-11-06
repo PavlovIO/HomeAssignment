@@ -1,10 +1,10 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSAUTOBOT_H
-#define CLASSAUTOBOT_H
+#ifndef AUTOBOT_H
+#define AUTOBOT_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Autobot : public Transformer
 {

@@ -1,10 +1,10 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSDINOBOT_H
-#define CLASSDINOBOT_H
+#ifndef DINOBOT_H
+#define DINOBOT_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Dinobot: public Transformer
 {

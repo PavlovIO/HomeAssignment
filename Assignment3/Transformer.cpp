@@ -2,7 +2,7 @@
 	assignment3
 */
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 //Конструктор
 Transformer::Transformer(Gun* gun,Ultimate* ultimate, int x_pos, int y_pos)

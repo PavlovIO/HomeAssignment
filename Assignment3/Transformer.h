@@ -1,13 +1,13 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSTRANSFORMER_H
-#define CLASSTRANSFORMER_H
+#ifndef TRANSFORMER_H
+#define TRANSFORMER_H
 
-#include "ClassDirection.h"
-#include "ClassGun.h"
-#include "ClassUltimate.h"
-#include <iostream>
+#include "Direction.h"
+#include "Gun.h"
+#include "Ultimate.h"
+
 
 
 

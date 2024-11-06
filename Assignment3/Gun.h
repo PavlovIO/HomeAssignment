@@ -1,11 +1,10 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSGUN_H
-#define CLASSGUN_H
+#ifndef GUN_H
+#define GUN_H
 
-#include <iostream>
-#include <string>
+#include "headers.h"
 
 class Gun
 {

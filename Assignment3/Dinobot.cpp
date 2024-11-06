@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "ClassDinobot.h"
+#include "Dinobot.h"
 
 Dinobot::Dinobot(Gun *gun = new Gun(Gun::Type::Claw), std::string form = "Tiranasaurus")
     : Transformer(gun), _form(form), _is_hunting(false) {}

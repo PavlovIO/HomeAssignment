@@ -1,11 +1,10 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSULTIMATE_H
-#define CLASSULTIMATE_H
+#ifndef ULTIMATE_H
+#define ULTIMATE_H
+#include "headers.h"
 
-#include <string>
-#include <iostream>
 
 class Ultimate
 {

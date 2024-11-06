@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "ClassDecepticon.h"
+#include "Decepticon.h"
 
 Decepticon::Decepticon(std::string form = "Tank")
     : _form(form) {}

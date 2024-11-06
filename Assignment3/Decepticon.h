@@ -1,10 +1,10 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#ifndef CLASSDECEPTICON_H
-#define CLASSDECEPTICON_H
+#ifndef DECEPTICON_H
+#define DECEPTICON_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Decepticon: public Transformer
 {

@@ -5,7 +5,8 @@ CXXFLAGS = -Wall -Werror -Wpedantic -g -std=c++11
 LDFLAGS = -lgtest -lgtest_main -pthread
 
 # Список всех исходников
-SRC = ClassTransformer.cpp ClassGun.cpp ClassDirection.cpp ClassUltimate.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassDinobot.cpp Tests.cpp
+SRC = $(wildcard *.cpp)
+
 #Список всех объектных файлов
 OBJ = $(SRC:.cpp=.o)
 
@@ -33,14 +34,7 @@ cleanall:
 run: $(TARGET)
 	./$(TARGET)
 
-# Указываем зависимости для объектных файлов
-ClassTransformer.o: ClassTransformer.cpp ClassTransformer.h ClassGun.h ClassUltimate.h ClassDirection.h
-ClassGun.o: ClassGun.cpp ClassGun.h
-ClassDirection.o: ClassDirection.cpp ClassDirection.h
-ClassUltimate.o: ClassUltimate.cpp ClassUltimate.h
-ClassAutobot.o: ClassAutobot.cpp ClassAutobot.h
-ClassDecepticon.o: ClassDecepticon.cpp ClassDecepticon.h
-ClassDinobot.o: ClassDinobot.cpp ClassDinobot.h
+
 
 .PHONY: all clean run
 

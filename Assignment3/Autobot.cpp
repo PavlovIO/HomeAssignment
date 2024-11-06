@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "ClassAutobot.h"
+#include "Autobot.h"
 
 Autobot::Autobot(std::string form = "Car")
     :_form(form) {}

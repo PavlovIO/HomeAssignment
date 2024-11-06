@@ -1,13 +1,9 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "ClassUltimate.h"
-#include "ClassAutobot.h"
-#include "ClassDecepticon.h"
-#include "ClassDinobot.h"
-#include "ClassTransformer.h"
-#include "ClassGun.h"
-#include "ClassDirection.h"
+#include "Autobot.h"
+#include "Decepticon.h"
+#include "Dinobot.h"
 #include <gtest/gtest.h>
 // Тесты для класса Ultimate
 class UltimateTest : public ::testing::Test
