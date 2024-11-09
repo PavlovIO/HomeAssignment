@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "Ultimate.h"
+#include "AllClassesHeader.h"
 //Конструктор
 Ultimate::Ultimate(Type type)
     : _type(type), _is_used(false), _stats(get_stats_for_type(type)) {}

@@ -3,8 +3,11 @@
 */
 #include "Decepticon.h"
 
-Decepticon::Decepticon(std::string form = "Tank")
-    : _form(form) {}
+Decepticon::Decepticon(Gun* gun, Ultimate* ultimate, std::string form, int x_pos, int y_pos)
+    : Transformer(gun, ultimate, x_pos, y_pos), _form(form) {}
+
+Decepticon::Decepticon(int x_pos, int y_pos)
+    : Transformer(new Gun(Gun::Type::Shotgun), new Ultimate(Ultimate::Type::Buff), x_pos, y_pos), _form("Tank") {}
 
 bool Decepticon::Transform()
 {

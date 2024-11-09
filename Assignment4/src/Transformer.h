@@ -15,7 +15,13 @@ class Transformer
 {
 public:
     //конструктор
-    Transformer(Gun* _gun = new Gun(Gun::Type::Pistol),Ultimate* ultimate  = new Ultimate(Ultimate::Type::Shield), int x_pos = 0, int y_pos  = 0);
+    Transformer(Gun* _gun, Ultimate* ultimate, int x_pos = 0, int y_pos = 0);
+    
+    Transformer(Ultimate* ultimate, int x_pos = 0, int y_pos = 0);
+    
+    Transformer(Gun* _gun, int x_pos = 0, int y_pos = 0);
+    
+    Transformer(int x_pos = 0, int y_pos = 0);
 
     //деструктор
     ~Transformer();
@@ -54,8 +60,10 @@ public:
     void set_y_pos(int y_pos);
     void set_ultimate(Ultimate *ultimate);
 
-private:
+    //перегрузки методов
+    friend std::ostream& operator<<(std::ostream& os, Transformer& transformer);
 
+private:
     //поля
     Gun* _gun;
     Ultimate* _ultimate;

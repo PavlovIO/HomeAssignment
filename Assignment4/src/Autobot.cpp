@@ -3,8 +3,11 @@
 */
 #include "Autobot.h"
 
-Autobot::Autobot(std::string form = "Car")
-    :_form(form) {}
+Autobot::Autobot(Gun* gun, Ultimate* ultimate, std::string form,  int x_pos, int y_pos)
+    : Transformer(gun, ultimate, x_pos, y_pos), _form(form) {}
+
+Autobot::Autobot(int x_pos, int y_pos)
+    : Transformer(new Gun(Gun::Type::Rifle), new Ultimate(Ultimate::Type::Buff), x_pos, y_pos), _form("Car") {}
 
 bool Autobot::Transform()
 {

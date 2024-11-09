@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include "Direction.h"
+#include "AllClassesHeader.h"
 
 Direction::Direction(Type type) : _type(type) {}
 

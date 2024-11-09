@@ -26,7 +26,9 @@ public:
 
     //методы
     Stats get_stats() const;
-
+    
+    friend std::ostream& operator<<(std::ostream& os, Gun& gun);
+    
 private:
 
     Gun::Stats get_stats_for_type(Type type);

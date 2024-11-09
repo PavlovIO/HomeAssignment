@@ -1,7 +1,7 @@
 /* Ilya Pavlov st129535@student.spbu.ru
 	assignment3
 */
-#include"Gun.h"
+#include"AllClassesHeader.h"
 
 //конструктор
 Gun::Gun(Type type)

@@ -9,8 +9,9 @@
 class Dinobot: public Transformer
 {
 public:
-    Dinobot(Gun *gun, std::string form) ;
-    Dinobot(std::string form);
+    Dinobot(Gun *gun , std::string form, int x_pos = -10, int y_pos = 10);
+    
+    Dinobot(int x_pos = -10, int y_pos = 10);
 
     bool growl();
     bool start_hunt();

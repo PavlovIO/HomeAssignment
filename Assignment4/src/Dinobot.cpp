@@ -3,11 +3,11 @@
 */
 #include "Dinobot.h"
 
-Dinobot::Dinobot(Gun *gun = new Gun(Gun::Type::Claw), std::string form = "Tiranasaurus")
-    : Transformer(gun), _form(form), _is_hunting(false) {}
+Dinobot::Dinobot(Gun *gun , std::string form, int x_pos, int y_pos)
+    : Transformer(gun, new Ultimate(Ultimate::Type::No_ultimate), x_pos, y_pos), _form(form), _is_hunting(false) {}
 
-Dinobot::Dinobot(std::string form = "Tiranasaurus")
-    : Dinobot(new Gun(Gun::Type::Claw), form) {}
+Dinobot::Dinobot(int x_pos, int y_pos)
+    : Transformer(new Gun(Gun::Type::Claw), new Ultimate(Ultimate::Type::No_ultimate), x_pos, y_pos), _form("Tiranasaurus") {}
 
 bool Dinobot::growl()
 {

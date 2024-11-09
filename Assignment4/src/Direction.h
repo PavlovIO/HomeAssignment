@@ -22,6 +22,9 @@ public:
     void turn_around();
 
     std::string get_direction() const;
+    
+    friend std::ostream& operator<<(std::ostream& os, Direction& dir);
+    
 private:
     Type _type;
 };

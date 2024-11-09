@@ -9,7 +9,9 @@
 class Decepticon: public Transformer
 {
 public:
-    Decepticon( std::string form) ;
+    Decepticon(Gun* _gun, Ultimate* ultimate, std::string form, int x_pos = 10, int y_pos = 10);
+    
+    Decepticon(int x_pos = 10, int y_pos = 10);
 
     bool Transform();
 

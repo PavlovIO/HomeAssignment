@@ -1,0 +1,10 @@
+Level: 1
+Strength: 5
+Health: 20
+Fuel: 100
+Ammo: 0
+Position: (10 ,10 )
+Gun: Type: Pistol, Damage: 10, Range: 50, Fire Rate: 1
+Ultimate: Ultimate type: Shield, Ultimate state: ult is ready
+Direction: North
+

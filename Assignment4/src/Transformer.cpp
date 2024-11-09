@@ -8,6 +8,15 @@
 Transformer::Transformer(Gun* gun,Ultimate* ultimate, int x_pos, int y_pos)
     : _gun(gun), _ultimate(ultimate), _x_pos(x_pos), _y_pos(y_pos) {}
 
+Transformer::Transformer(Ultimate* ultimate, int x_pos, int y_pos)
+    : _gun(new Gun(Gun::Type::Pistol)), _ultimate(ultimate), _x_pos(x_pos), _y_pos(y_pos) {}
+
+Transformer::Transformer(Gun* gun, int x_pos, int y_pos)
+    : _gun(gun), _ultimate(new Ultimate(Ultimate::Type::Shield)), _x_pos(x_pos), _y_pos(y_pos) {}
+
+Transformer::Transformer(int x_pos, int y_pos)
+    : _gun(new Gun(Gun::Type::Pistol)), _ultimate(new Ultimate(Ultimate::Type::Shield)), _x_pos(x_pos), _y_pos(y_pos) {}    
+
 //деструктор
 Transformer::~Transformer()
 {
@@ -36,7 +45,7 @@ Transformer::Transformer(const Transformer& other)
 bool Transformer::move()
 {
     std::cout<<"Moving"<<std::endl;
-    //будет добавлена логика проверки в каком направлении идти и можно ли пройти
+    
     _x_pos = _x_pos;
     _y_pos = _y_pos;
     return true;

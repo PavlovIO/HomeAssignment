@@ -9,7 +9,9 @@
 class Autobot : public Transformer
 {
 public:
-    Autobot(std::string form) ;
+    Autobot(Gun* _gun, Ultimate* ultimate, std::string form,  int x_pos = -10, int y_pos = -10);
+    
+    Autobot(int x_pos = -10, int y_pos = -10);
 
     bool Transform();
 

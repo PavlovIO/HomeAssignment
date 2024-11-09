@@ -24,6 +24,9 @@ public:
     void use();
     std::string ultimate_type();
     bool get_is_used() const;
+    
+    friend std::ostream& operator<<(std::ostream& os, Ultimate& ult);
+    
 private:
     Ultimate::Stats get_stats_for_type(Type type);
 
