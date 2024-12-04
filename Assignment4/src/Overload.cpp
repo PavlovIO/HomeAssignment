@@ -1,4 +1,6 @@
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment4
+*/
 #include "Transformer.h"
 
 std::ostream& operator<<(std::ostream& os, Ultimate& ult) {
@@ -34,5 +36,45 @@ std::ostream& operator<<(std::ostream& os, Transformer& transformer) {
        << "Direction: " << transformer._dir << std::endl;
        return os;
 };
+
+bool operator<(const Transformer& other)
+{
+    return this->_power < other._power;
+};
+bool operator==(const Transformer& other)
+{
+    return this->_power == other._power;
+};
+bool operator>(const Transformer& other)
+{
+    return not( other < *this );
+};
+bool operator<=(const Transformer& other)
+{
+    return !(other < *this);
+};
+bool operator>=(const Transformer& other)
+{
+    return !(*this < other);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

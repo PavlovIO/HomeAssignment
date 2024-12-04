@@ -20,16 +20,6 @@ std::string Decepticon::get_form()
     return _form;
 };
 
-int Decepticon::get_anger()
-{
-    return _anger;
-};
-
-void Decepticon::set_anger(int anger)
-{
-    _anger = anger;
-};
-
 void Decepticon::set_form(const std::string form)
 {
     _form = form;

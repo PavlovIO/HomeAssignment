@@ -16,16 +16,17 @@ public:
     bool Transform();
 
     std::string get_form();
-    int get_courage();
     bool get_is_transformed();
 
     void set_form(const std::string form);
-    void set_courage(int courage);
+    void set_special_power(int special_power);
 
 private:
+    int update_power();
+
     std::string _form;
     bool _is_transformed = false;
-    int _courage = 10;
+    int _special_power = 10;
 };
 
 #endif

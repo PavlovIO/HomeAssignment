@@ -152,6 +152,14 @@ void Transformer::get_ultimate()
 {
     _ultimate -> ultimate_type();
 };
+int Transformer::get_power()
+{
+    return _power;
+};
+int Transformer::get_special_power()
+{
+    return _special_power;
+};
 //Реализация методов сеттеров
 
 void Transformer::set_level(uint level)
@@ -201,6 +209,10 @@ void Transformer::set_ultimate(Ultimate *ultimate)
     _ultimate = ultimate;
 };
 
+void Transformer::set_special_power(special_power)
+{
+    _special_power = special_power;
+};
 
 
 

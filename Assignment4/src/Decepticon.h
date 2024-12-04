@@ -18,13 +18,12 @@ public:
     std::string get_form();
     void set_form(const std::string form);
     bool get_is_transformed();
-    int get_anger();
-    void set_anger(int courage);
+    void set_special_power(int _special_power);
 
 private:
     std::string _form;
     bool _is_transformed = false;
-    int _anger = 10;
+    int _special_power = 10;
 };
 
 #endif

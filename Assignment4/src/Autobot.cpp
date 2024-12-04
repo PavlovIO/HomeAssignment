@@ -20,16 +20,6 @@ std::string Autobot::get_form()
     return _form;
 };
 
-int Autobot::get_courage()
-{
-    return _courage;
-};
-
-void Autobot::set_courage(int courage)
-{
-    _courage = courage;
-};
-
 void Autobot::set_form(const std::string form)
 {
     _form = form;
@@ -39,4 +29,5 @@ bool Autobot::get_is_transformed()
 {
     return _is_transformed;
 };
+
 

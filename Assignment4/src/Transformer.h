@@ -1,5 +1,5 @@
 /* Ilya Pavlov st129535@student.spbu.ru
-	assignment3
+	assignment4
 */
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
@@ -7,9 +7,6 @@
 #include "Direction.h"
 #include "Gun.h"
 #include "Ultimate.h"
-
-
-
 
 class Transformer
 {
@@ -47,7 +44,8 @@ public:
     int get_x_pos();
     int get_y_pos();
     void get_ultimate();
-
+    int get_power();
+    int get_special_power();
 
     // сеттеры
     void set_level(uint level);
@@ -59,9 +57,15 @@ public:
     void set_x_pos(int x_pos);
     void set_y_pos(int y_pos);
     void set_ultimate(Ultimate *ultimate);
+    void set_special_power(special_power);
 
     //перегрузки методов
     friend std::ostream& operator<<(std::ostream& os, Transformer& transformer);
+    friend bool operator<(const Transformer& other);
+    friend bool operator==(const Transformer& other);
+    friend bool operator>(const Transformer& other);
+    friend bool operator<=(const Transformer& other);
+    friend bool operator>=(const Transformer& other);
 
 private:
     //поля
@@ -75,6 +79,8 @@ private:
     uint _fuel = 100;
     uint _ammo = 0;
     Direction _dir = Direction::Type::North;
+    int _power = _level*_strength*_gun._stats.damage*_special_power;
+    int _special_power = 1
 };
 
 #endif

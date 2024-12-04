@@ -18,12 +18,12 @@ public:
 
     std::string get_form();
     bool get_is_hunting();
-
     void set_is_hunting(bool is_hunting);
 
 private:
     std::string _form;
     bool _is_hunting = false;
+    
 };
 
 #endif
