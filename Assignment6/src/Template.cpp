@@ -1,6 +1,6 @@
-
-
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment6
+*/
 #include "Template.h"
 //Genral functions
 template <typename T>

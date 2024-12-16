@@ -1,6 +1,6 @@
-
-
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment6
+*/
 #include "Classes.h"
 bool Class1::bar(int num, std::vector<double>& vec)
 {

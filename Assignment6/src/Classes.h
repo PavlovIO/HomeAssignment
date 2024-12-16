@@ -1,6 +1,6 @@
-
-
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment6
+*/
 #ifndef CLASSES_H
 #define CLASSES_H
 #include "headers.h"

@@ -1,6 +1,6 @@
-
-
-
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment6
+*/
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 #include "headers.h"
