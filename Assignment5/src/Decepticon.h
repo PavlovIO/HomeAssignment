@@ -1,5 +1,5 @@
 /* Ilya Pavlov st129535@student.spbu.ru
-	assignment3
+	assignment5
 */
 #ifndef DECEPTICON_H
 #define DECEPTICON_H

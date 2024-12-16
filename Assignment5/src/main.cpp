@@ -1,3 +1,6 @@
+/* Ilya Pavlov st129535@student.spbu.ru
+	assignment5
+*/
 #include "Transformer.h"
 int main(){
     Transformer bot = Transformer(10, 10);

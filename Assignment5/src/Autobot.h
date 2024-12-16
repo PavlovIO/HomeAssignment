@@ -1,5 +1,5 @@
 /* Ilya Pavlov st129535@student.spbu.ru
-	assignment3
+	assignment5
 */
 #ifndef AUTOBOT_H
 #define AUTOBOT_H

@@ -1,5 +1,5 @@
 /* Ilya Pavlov st129535@student.spbu.ru
-	assignment4
+	assignment5
 */
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
@@ -32,6 +32,7 @@ public:
     bool jump();
     bool fire();
     bool ultimate();
+    bool Transform();
 
     //геттеры
     uint get_level();
